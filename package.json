@@ -1,0 +1,28 @@
+{
+  "name": "travelbuddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varunmehta14/TravelBuddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varunmehta14/TravelBuddy/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.12.1",
+    "node": "^15.10.0",
+    "nodemon": "^2.0.7"
+  },
+  "homepage": "https://github.com/varunmehta14/TravelBuddy#readme"
+}
