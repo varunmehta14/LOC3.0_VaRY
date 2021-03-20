@@ -58,11 +58,12 @@ createUser = (req, res) => {
     //         })
     //     })
 }
-getCurrentUser=(req,res)=>{
+getCurrentUser=async(req,result)=>{
     const body = req.body
     console.log(body)
+    console.log("here")
     if (!body) {
-        return res.status(400).json({
+        return result.status(400).json({
             success: false,
             error: 'You must provide a user',
         })
@@ -71,36 +72,42 @@ getCurrentUser=(req,res)=>{
     // var hashedPassword = bcrypt.hashSync(body.password, 8);
     // console.log(hashedPassword);
 
-     User.findOne({userName:body.userName}, (err, user) => {
-        const validPassword = bcrypt.compare(
-            req.body.password, // the plane text password that we get from the client
-            user.password,     // the hashed password from our database
-          )
-          
-          if (!validPassword){ 
-            console.log("Invalid"); // return to the user that the password is invalid
-            return res
-              .status(status.BadRequest)
-              .json({message:'Invalid email or password'})
-              
-              
-          }   
-         console.log("Here", user, err);
-        if (err) {
-            return res.status(404).json({
-                err,
-                message: 'User not found!',
-            })
+    await User.findOne({userName:body.userName},  (err, user) => {console.log(err)
+         console.log(user, "user");
+   bcrypt.compare(
+    body.password, 
+    user.password,
+    (err,res)=>{if (err){console.log("here",err)}
+
+    //     //if both match than you can do anything
+        if (res) {
+            console.log("here")
+            return result.status(200).json({ success:"true",msg: "Login success" })
+        } else {
+            return result.status(401).json({ msg: "Invalid credential" })
         }
+   // the hashed password from our database
+   console.log(err, res, 'here', user.password)
+   })
+         
+          
+        //   if (!validPassword){ 
+        //     console.log("Invalid"); // return to the user that the password is invalid
+        //     return res
+        //       .status(status.BadRequest)
+        //       .json({message:'Invalid email or password'})
+              
+              
+        //   }   
+        //  console.log("Here", user, err);
+        // if (err) {
+        //     return res.status(404).json({
+        //         err,
+        //         message: 'User not found!',
+        //     })
+        // }
     })
-    .then((response) => {
-        console.log(response)
-    if (response.data.accessToken) {
-      localStorage.setItem("user", JSON.stringify(response.data));
-    }
-  console.log(response.data);
-    return (response.data);
-  });
+   
 }
 updateUser = async (req, res) => {
     const body = req.body

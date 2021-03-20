@@ -43,11 +43,11 @@ thisForm2.addEventListener('submit', async function (e) {
     //const formData = new FormData(thisForm).entries()
 	//console.log(formData)
 	
-	const email=(document.getElementById('myEmail1').value)
+	const userName=(document.getElementById('myuserName1').value)
 	const password=(document.getElementById('myPassword1').value)
 	
 	
-	const payload={email,password}
+	const payload={userName,password}
 	console.log(payload)
     const response = await fetch('http://localhost:3000/userApi/signIn', {
         method: 'POST',
