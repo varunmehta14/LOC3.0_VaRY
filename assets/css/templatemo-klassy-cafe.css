@@ -1,39 +1,7 @@
-/*
 
-TemplateMo 558 Klassy Cafe
-
-https://templatemo.com/tm-558-klassy-cafe
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
-
---------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
+/* font & reset css */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -108,11 +76,7 @@ p {
   color: #2a2a2a;
 }
 
-/* 
----------------------------------------------
-global styles
---------------------------------------------- 
-*/
+/* global styles */
 html,
 body {
   background: #fff;
@@ -201,11 +165,7 @@ body {
 }
 
 
-/* 
----------------------------------------------
-header
---------------------------------------------- 
-*/
+/* header */
 
 .background-header {
   background-color: #fff;
@@ -314,14 +274,15 @@ header
 
 .header-area .main-nav .nav li.submenu {
   position: relative;
-  padding-right: 30px;
+  /* padding-right: 30px; */
+  text-align: center;
 }
 
 .header-area .main-nav .nav li.submenu:after {
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #2a2a2a;
+  color: #000000;
   position: absolute;
   right: 18px;
   top: 12px;
@@ -353,6 +314,7 @@ header
 .header-area .main-nav .nav li.submenu ul li a {
   opacity: 1;
   position:relative;
+  text-align: center;
   display: inline-block;
   background: #f7f7f7;
   color: #2a2a2a!important;
@@ -367,6 +329,12 @@ header
   font-size: 13px;
   font-weight: 400;
   border-bottom: 1px solid #eee;
+  width: 200px;
+}
+
+.header-area .main-nav .nav li.submenu ul li a:hover{
+  color: red !important;
+  background-color: #afa6a6!important;
 }
 
 .header-area .main-nav .nav li a:hover {
@@ -627,11 +595,7 @@ header
 }
 
 
-/* 
----------------------------------------------
-banner
---------------------------------------------- 
-*/
+/* banner */
 
 #top {
   padding-top: 100px;
@@ -728,7 +692,7 @@ banner
 }
 
 .slick-slide {
-  float: left /* If RTL Make This Right */ ;
+  float: left ;
   padding: 0;
 }
 
@@ -892,7 +856,6 @@ about
 menu
 ---------------------------------------------
 */
-
 #menu {
   margin-top: 120px;
   background-color: #fffafa;
@@ -928,6 +891,7 @@ menu
 .card5 {
   background-image: url(../images/menu-item-05.jpg);
 }
+
 
 .info {
   position: relative;
@@ -1199,7 +1163,7 @@ reservation
 }
 
 #reservation {
-  margin-top: 120px;
+  margin-top: 0px; 
   padding: 120px 0px;
   background-image: url(../images/reservation-bg.jpg);
   background-position: center center;
@@ -1462,7 +1426,7 @@ footer
 */
 
 footer {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   padding: 50px 0px;
   background-color: #fb5849;
 }
@@ -1487,8 +1451,12 @@ footer .right-text-content {
   margin-top: 10px;
 }
 
-footer .logo {
+footer .logo a {
   text-align: center;
+  color: white !important;
+  font-family: 'Dancing Script';
+  text-decoration: none;
+  font-size: 3rem;
 }
 
 footer .right-text-content ul li {
