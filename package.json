@@ -29,5 +29,6 @@
     "node": "^15.10.0",
     "nodemon": "^2.0.7"
   },
+  
   "homepage": "https://github.com/varunmehta14/TravelBuddy#readme"
 }

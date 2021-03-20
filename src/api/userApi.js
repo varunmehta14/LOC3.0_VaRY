@@ -9,13 +9,14 @@ export const getAllUsers = () => userApi.get(`/users`)
 export const updateUserById = (id, payload) => userApi.put(`/user/${id}`, payload)
 export const deleteUserById = id => userApi.delete(`/user/${id}`)
 export const getUserById = id => userApi.get(`/user/${id}`)
-
+export const getCurrentUser=payload=>userApi.post(`/signIn`,payload)
 const userApis = {
     insertUser,
     getAllUsers,
     updateUserById,
     deleteUserById,
     getUserById,
+    getCurrentUser
 }
 
 export default userApis;

@@ -21,6 +21,7 @@ createUser = (req, res) => {
     userName : body.userName,
     email : body.email,
     password : hashedPassword,
+    role: body.role,
    
   },
   function (err, user) {
