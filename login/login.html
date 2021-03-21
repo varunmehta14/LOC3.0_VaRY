@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>travelbuddy-login</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
@@ -34,12 +34,12 @@ thisForm.addEventListener('submit', async function (e) {
 			</div>
 			<span>or use your email for registration</span>
 			<input type="text" placeholder="Username" id="myName"/>
-				<input name="Role"id="admin"type="radio" style="float: left"value="Admin"/>
-				<input name="Role"id="user"type="radio" style="float: right"value="User"/>
+				<input name="Role"id="admin"type="radio" style="float: left"value="Admin">Admin</input>
+				<input name="Role"id="user"type="radio" style="float: right"value="User"/>User</input>
 				<!-- <input type="text" placeholder="Role" id="myRole"/> -->
 			<input id="myEmail"type="email" placeholder="Email" />
-			<input id="myPassword"type="password" placeholder="Password" />
-			<button id="postSubmit" type="submit">SignUp</button>
+			<input id="myPassword"type="password" placeholder="Password"minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." />
+			<button id="postSubmit" type="submit" >SignUp</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -52,7 +52,7 @@ thisForm.addEventListener('submit', async function (e) {
 			</div>
 			<span>or use your account</span>
 			<input id="myuserName1"type="text" placeholder="User Name" />
-			<input id="myPassword1"type="password" placeholder="Password" />
+			<input id="myPassword1"type="password" placeholder="Password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."/>
 			<a href="#">Forgot your password?</a>
 			<button id="postSubmit1" type="submit">Sign In</button>
 		</form>
@@ -75,7 +75,7 @@ thisForm.addEventListener('submit', async function (e) {
 
 
 <!-- partial -->
-  <script  src="../assets/js/script.js"></script>
+  <script  src="assets/js/script.js"></script>
 
 
 </body>

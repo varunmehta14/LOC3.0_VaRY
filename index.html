@@ -9,7 +9,11 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10a7d7039c.js" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
     <title>Travel Buddy</title>
 <!--
     
@@ -86,6 +90,9 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
+                            <li class="scroll-to-section"><button2 onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                                <button2 onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                     <a href="login/login.html">Login /signup</a></button2></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -171,17 +178,42 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
-                        <video width="600" height="400" autoplay muted>
-                            <source src="assets/images/movie.mp4" type="video/mp4">
-                            <source src="assets/images/movie.ogg" type="video/ogg">
-                          Your browser does not support the video tag.
-                          </video>
-                    </div>
+                     <iframe width="600" height="400" src="https://www.youtube.com/embed/nkwLjnragtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="image fit"><img src="assets/images/about-video-bg.jpg"
+						alt=""  ></iframe> 
+                                 </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- ***** About Area Ends ***** -->
+
+    <div>
+
+        <section id="features">
+          <div class="row">
+      
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-check-circle fa-5x"></i>
+            <h3><bold>Easy to use</bold></h3>
+            <p>So easy to use, even your son could visit Goa alone</p>
+          </div>
+          
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-money-bill-wave fa-5x"></i>
+            <h3><bold>Best Deals</bold></h3>
+            <p>No need to wait for your salary</p>
+          </div>
+          
+          <div class="feature-box col-lg-4">
+            <i class="icon far fa-calendar-check fa-5x"></i>
+            <h3><bold>Book your Trip and Enjoy</bold></h3>
+            <p>Just book your trip and say "Hamari pawri ho rhi hai"</p>
+          </div>
+      
+        </div>
+      </section>
+      </div>
+      
 
     <!-- ***** Menu Area Starts ***** -->
     <section class="section" id="menu">
@@ -199,7 +231,8 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="col-lg-12">
                 <div class="owl-menu-item owl-carousel">
                     <div class="item">
-                        <div class='card card1'>
+                        <div class='card card1' onclick="location.href='paris/paris.html';" style="cursor: pointer;">
+
                             <!-- <div class="price"><h6>$14</h6></div> -->
                             <div class='info'>
                               <h1 class='title'>Paris</h1>
@@ -211,7 +244,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         </div>
                     </div>
                     <div class="item">
-                        <div class='card card2'>
+                        <div class='card card2' onclick="location.href='switzerland/switzerland.html';" style="cursor: pointer;">
                             <!-- <div class="price"><h6>$22</h6></div> -->
                             <div class='info'>
                               <h1 class='title'>Switzerland</h1>
@@ -223,7 +256,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         </div>
                     </div>
                     <div class="item">
-                        <div class='card card3'>
+                        <div class='card card3' onclick="location.href='new-york/new-york.html';" style="cursor: pointer;">
                             <!-- <div class="price"><h6>$18</h6></div> -->
                             <div class='info'>
                               <h1 class='title'>New York City</h1>
@@ -235,7 +268,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         </div>
                     </div>
                     <div class="item">
-                        <div class='card card4'>
+                        <div class='card card4' onclick="location.href='agra/agra.html';" style="cursor: pointer;">
                             <!-- <div class="price"><h6>$10</h6></div> -->
                             <div class='info'>
                               <h1 class='title'>Agra</h1>
@@ -247,7 +280,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         </div>
                     </div>
                     <div class="item">
-                        <div class='card card5'>
+                        <div class='card card5' onclick="location.href='dubai/dubai.html';" style="cursor: pointer;">
                             <!-- <div class="price"><h6>$7.25</h6></div> -->
                             <div class='info'>
                               <h1 class='title'>Dubai</h1>
@@ -392,6 +425,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-play"></i></a></li>
                             </ul>
                     </div>
                 </div>
