@@ -36,6 +36,7 @@ thisForm.addEventListener('submit', async function (e) {
     const result = await response.json();
 	console.log(result.auth);
     if(result&&result.auth){window.location.href='../loggedIn.html'}
+	
 });
 
 const thisForm2 = document.getElementById('Login');
@@ -59,4 +60,5 @@ thisForm2.addEventListener('submit', async function (e) {
     const result = await response.json();
     console.log(result.success);
 	if(result&&result.success){window.location.href="../loggedIn.html"}
+	else if(result&&!result.success){alert("Enter correct credentials")}
 });
